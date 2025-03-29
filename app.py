@@ -3,7 +3,7 @@ from flask import Flask, jsonify
 app = Flask(__name__)
 
 students = [
-    {"name": "asha nambari", "program": "Software Engineering"},
+    {"name": "asha  nambari", "program": "Software Engineering"},
     {"name": "Hassan gombanila", "program": "Computer Science"},
     {"name": "shaibu said", "program": "Information Systems"},
     {"name": "mulhat malick", "program": "Software Engineering"},
