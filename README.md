@@ -8,7 +8,7 @@ o	/subjects → Returns a list of subjects categorized by year.
 sh
 
 python app.py
-This started the server on http://127.0.0.1:10000.
+This started the server on http://216.24.57.252
 2. Preparing for Deployment
 •	I created a virtual environment (venv) to manage dependencies.
 sh
