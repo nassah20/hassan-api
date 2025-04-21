@@ -14,7 +14,8 @@ This started the server on http://127.0.0.1:10000.
 sh
 
 python -m venv venv
-venv\Scripts\activate  # For Windows
+venv\Scripts\activate  
+For Windows
 •	Installed Flask inside the environment:
 sh
 
