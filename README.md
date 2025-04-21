@@ -44,3 +44,42 @@ sh
 
 gunicorn app:app
 o	Clicked Deploy.
+
+bash_scripts Directory
+
+This directory contains three main scripts:
+
+ 1. health_check.sh
+ Purpose: Monitors the system's resource usage and checks API availability.
+ Functions:
+  - Checks CPU, memory, and disk usage
+  - Verifies the web server (e.g., Apache) is running
+  - Tests `/students` and `/subjects` API endpoints using `curl`
+  - Logs output to `/var/log/server_health.log`
+  - Adds warnings if disk space is low or an endpoint fails
+
+  2.backup_api.sh
+   Purpose: Backs up the API project files and database.
+   Functions:
+  - Compresses the API project directory into `/home/ubuntu/backups`
+  - Dumps the MySQL database into an SQL file
+  - Deletes backups older than 7 days
+  - Logs results to `/var/log/backup.log`
+
+3.update_server.sh
+Purpose: Automates server and API updates.
+Functions
+  - Runs `apt update` and `apt upgrade` for system packages
+  - Pulls the latest API code from GitHub
+  - Restarts the web server (Apache)
+  - Logs output to `/var/log/update.log`
+  - If `git pull` fails, it logs the error and skips the restart
+
+ How to Use the Scripts
+ 1. Set Execute Permissions
+Before running any script, you must make it executable:
+
+bash
+chmod +x health_check.sh
+chmod +x backup_api.sh
+chmod +x update_server.sh
