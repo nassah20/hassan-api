@@ -15,7 +15,7 @@ def get_students():
         {"name": "juma ramadhan", "program": "Computer Engineering"},
         {"name": "Winnie peter", "program": "Software Engineering"},
         {"name": "samwel madembwe", "program": "Information Technology"}
-    ])
+    ]),200
 
 @app.route('/subjects', methods=['GET'])
 def get_subjects():
@@ -88,7 +88,7 @@ def get_subjects():
             "Cloud Computing(CP 424)",
             "Foundations of Data Science(CG 222)"
         ]
-    })
+    }),200
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
