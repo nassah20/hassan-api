@@ -86,7 +86,7 @@ subjects = {
 }
 
 db_config = {
-    "host": os.getenv("DB_HOST", "localhost"),
+    "host": os.getenv("DB_HOST", "db"),
     "user": os.getenv("DB_USER", "root"),
     "password": os.getenv("DB_PASSWORD", " "),
     "database": os.getenv("DB_NAME", "hassanDB")
