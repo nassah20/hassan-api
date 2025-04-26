@@ -18,4 +18,4 @@ ENV FLASK_APP=app.py
 EXPOSE 5000
 
 # Run init_db.py first, then start Flask
-CMD ["sh", "-c", "python init_db.py && flask run --host=0.0.0.0"]
+CMD ["sh", "-c", "python init_db.py; flask run --host=0.0.0.0"]
