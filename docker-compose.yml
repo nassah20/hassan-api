@@ -10,7 +10,7 @@ services:
       - FLASK_APP=app.py
       - MYSQL_HOST=db
       - MYSQL_USER=root
-      - MYSQL_PASSWORD=
+      - MYSQL_PASSWORD=123
       - MYSQL_DB=hassanDB
 
   db:
