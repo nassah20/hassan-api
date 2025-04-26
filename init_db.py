@@ -86,10 +86,11 @@ subjects = {
 }
 
 db_config = {
-    "host": os.getenv("DB_HOST", "db"),
-    "user": os.getenv("DB_USER", "root"),
-    "password": os.getenv("DB_PASSWORD", " "),
-    "database": os.getenv("DB_NAME", "hassanDB")
+    'host': os.getenv('MYSQL_HOST', 'localhost'),
+    'user': os.getenv('MYSQL_USER', 'root'),
+    'password': os.getenv('MYSQL_PASSWORD', ''),
+    'database': os.getenv('MYSQL_DB', 'hassanDB'),
+    'port': 3306
 }
 
 conn = mysql.connector.connect(**db_config)
