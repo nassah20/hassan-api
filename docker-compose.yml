@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  db:
+    image: mysql:8
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD:
+      MYSQL_DATABASE: hassanDB
+    volumes:
+      - db-data:/hassan-api/mysql
+    ports:
+      - "3306:3306"
+
+  api:
+    build: .
+    depends_on:
+      - db
+    ports:
+      - "5000:5000"
+    environment:
+      DB_HOST: db
+      DB_USER: root
+      DB_PASSWORD:
+      DB_NAME: hassanDB
+
+volumes:
+  db-data:
