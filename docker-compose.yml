@@ -16,7 +16,7 @@ services:
   db:
     image: mysql:5.7
     environment:
-      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_ROOT_PASSWORD=root 
       - MYSQL_DATABASE=hassanDB
     ports:
       - "3306:3306"
@@ -24,4 +24,4 @@ services:
       - db_data:/var/lib/mysql  
 
 volumes:
-  db_data:   
+  db_data:
