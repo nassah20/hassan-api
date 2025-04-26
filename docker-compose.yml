@@ -10,13 +10,13 @@ services:
       - FLASK_APP=app.py
       - MYSQL_HOST=db
       - MYSQL_USER=root
-      - MYSQL_PASSWORD=
+      - MYSQL_PASSWORD=root
       - MYSQL_DB=hassanDB
 
   db:
     image: mysql:5.7
     environment:
-      MYSQL_ROOT_PASSWORD: 
-      MYSQL_DATABASE:hassanDB
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=hassanDB
     ports:
       - "3306:3306"
