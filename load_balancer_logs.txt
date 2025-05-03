@@ -1,0 +1,16 @@
+
+> frontend@1.0.0 start
+> react-scripts start
+
+
+Starting the development server...
+
+Failed to compile.
+
+./src/index.js
+Module not found: Can't resolve 'react' in '/app/src'
+Compiling...
+Failed to compile.
+
+./src/index.js
+Module not found: Can't resolve 'react' in '/app/src'
